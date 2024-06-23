@@ -1,0 +1,18 @@
+[versions]
+ktor-client = "2.3.12"
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version = "2.0.0" }
+
+[libraries]
+ical4j = { module = "org.mnode.ical4j:ical4j", version = "4.0.0" }
+jsoup = { module = "org.jsoup:jsoup", version = "1.17.2" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.8.1" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor-client" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor-client" }
+
+[bundles]
+ktor-client = [
+    "ktor-client-core",
+    "ktor-client-cio"
+]
